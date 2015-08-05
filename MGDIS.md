@@ -10,6 +10,15 @@ This is a fork of kibana maintained with a few purposes:
 
   - [Contributing guide from original project](https://github.com/elastic/kibana/blob/master/CONTRIBUTING.md)
 
+## Development environment
+
+See the [contributing guide](https://github.com/elastic/kibana/blob/master/CONTRIBUTING.md).
+
+Note that kibana uses npm's scoped packages which are not supported by our own artifactory based registry.
+To use the standard npm registry you can create a .npmrc file in the project with this content:
+
+    registry=http://registry.npmjs.org/
+
 ## Branches and code management
 
 A few rules should be respected to maintain this repo properly.

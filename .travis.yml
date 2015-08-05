@@ -1,7 +1,7 @@
 language: node_js
-node_js: 'iojs-v2.4'
+node_js: iojs-v2.4
 install: npm install
-script: ./node_modules/.bin/grunt travis
+script: "./node_modules/.bin/grunt travis"
 sudo: false
 cache:
   directories:
@@ -17,8 +17,8 @@ notifications:
   - rashid.khan@elastic.co
   hipchat:
     rooms:
-      secure: UKrVR+5KztHarodQruQe97UJfwftutD6RNdXlVkr+oIr2GqccisDIIN9pAzS/kxl+eAnP1uT6VHzc9YI/jgbrmiSkz3DHViw+MwDwY2aIDgI8aHEbd/4B2ihtb15+OYTVbb+lytyz4+W8A8hSmbkTR/P/uFIJ+EYcBeYZfw1elo=
+      secure: oZGNjWW5/OCxU0Ce8CembsIdDUtMlk5f/n7xVXnTyiUZjAGOAgGf55KdwmRPs+Ty5D3rivFgdCSgqiZkI0/6YgGU+Q6n94LHDVmDJVRoMP2dwrZNJN3AI158NQyhrOwk32p5oXJASG3SnDHebHQcWIuSmb4dZYGmhRuofqk5y/Y/pfngIs3c/w0ov60NbDrI+5NzrYjju+YVlySHYEEwewcopDOBsmeIUExskE3B74bBiOLSHzNnsVOFjokfFETUVvsHyUYWaU5PsyOa4OEnt9rYeffFF3D51F+y5AxrFOtJkwYqOfyStwyQAJ47lmypA1eO/UTe4O3k3C0ZXThyEEamJYiy/v2vnFdo7h3JMbnLHAo+RtgPe4QMA5Fk8znGQF3CEyJ8Aep2FTCYD2wdX/EP8+jxlJMsihksYuNWZasDZXzb6KMSkJUJoBieCRUD8vKpuiDz2Rw1YU/b3GX4dh34u4Kgf34f9y2FFCPjKMisH3w5FyjBWf5b6oAw+3defE4fA5NbrUr54XB8wjYEnHzjqWAG4/E93ohvNjHIAA2vdRxG6kVyEpsLdPXCe8K0yUVss60Q+jYnL+hRpANQGLfYk89VZBz9OE+vEapzBEdpBS44hzMRYMrXNyux5FvLPbfiNTc6wE2hLqBbOVZ2I5Xm+KLE33Fk3VRRogTzzFM=
     format: html
     on_success: change
     template:
-    - ! '%{repository_slug}/%{branch} by %{author}: %{commit_message} (<a href="%{build_url}">open</a>)'
+    - '%{repository_slug}/%{branch} by %{author}: %{commit_message} (<a href="%{build_url}">open</a>)'
