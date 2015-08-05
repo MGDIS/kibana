@@ -32,6 +32,14 @@ The purpose is to both be able to maintain MGDIS specific features and keep comp
   - **a feature** that has the slightest chance of being included in the original project should follow its [contributing guide](https://github.com/elastic/kibana/blob/master/CONTRIBUTING.md).
   - **any feature** should be developped in respect of the original [style guide](https://github.com/MGDIS/kibana/blob/mgdis/STYLEGUIDE.md).
 
+To update our master from elastic's master, then update our 'mgdis' branch from our master the following lines are helpful:
+
+    git remote add elastic https://github.com/elastic/kibana.git
+    git checkout master
+    git pull elastic master
+    git checkout mgdis
+    git rebase master
+
 ## Show blockers
 
 These are issues that are considered as absolutely required by MGDIS before using Kibana 4 in our solutions.
