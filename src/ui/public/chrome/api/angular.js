@@ -11,15 +11,10 @@ module.exports = function (chrome, internals) {
     });
 
     kibana
-    .value('kbnVersion', internals.version)
-    .value('buildNum', internals.buildNum)
-    .value('buildSha', internals.buildSha)
-    .value('sessionId', Date.now())
-    .value('esUrl', (function () {
-      var a = document.createElement('a');
-      a.href = '/elasticsearch';
-      return a.href;
-    }()))
+    .constant('kbnVersion', internals.version)
+    .constant('buildNum', internals.buildNum)
+    .constant('buildSha', internals.buildSha)
+    .constant('sessionId', Date.now())
     .directive('kbnChrome', function ($rootScope) {
       return {
         template: function ($el) {
