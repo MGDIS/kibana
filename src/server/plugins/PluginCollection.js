@@ -21,7 +21,6 @@ module.exports = class Plugins extends Collection {
       if (product instanceof api.Plugin) {
         this[byIdCache] = null;
         this.add(product);
-        await product.setupConfig();
       } else {
         throw new TypeError('unexpected plugin export ' + inspect(product));
       }

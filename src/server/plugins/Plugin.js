@@ -47,12 +47,6 @@ module.exports = class Plugin {
     let register = (server, options, next) => {
       this.server = server;
 
-      // bind the server and options to all
-      // apps created by this plugin
-      for (let app of this.apps) {
-        app.getInjectedVars = _.partial(app.getInjectedVars, server, options);
-      }
-
       server.log(['plugins', 'debug'], {
         tmpl: 'Initializing plugin <%= plugin.id %>',
         plugin: this
@@ -61,7 +55,7 @@ module.exports = class Plugin {
       if (this.publicDir) {
         server.exposeStaticDir(`/plugins/${id}/{path*}`, this.publicDir);
       }
-
+      
       this.status = kbnServer.status.create(`plugin:${this.id}`);
       server.expose('status', this.status);
 
